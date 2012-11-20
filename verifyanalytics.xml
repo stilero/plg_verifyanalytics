@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.5" type="plugin" group="content" method="upgrade">
+	<name>Content - Plugin_Verify_Analytics</name>
+	<author>Daniel Eliasson (joomla@stilero.com)</author>
+	<creationDate>2012-nov-20</creationDate>
+	<copyright>Copyright (c) 2012-nov-20 Stilero Webdesign (www.stilero.com). All rights reserved.</copyright>
+	<authorEmail>joomla@stilero.com</authorEmail>
+	<authorUrl>www.stilero.com</authorUrl>
+	<version>1.0</version>
+	<license>GPLv2</license>
+	<description>Plugin to verify Google analytics</description>
+	<files>
+            <filename plugin="verifyanalytics">verifyanalytics.php</filename>
+	</files>
+        <config>
+        <fields name="params">
+                <fieldset name="settings" label="Settings">
+                    <field name="meta_code" type="text"  default="" label="Meta code" description="Enter the meta code"/>
+                </fieldset>
+        </fields>
+    </config>
+</extension>
