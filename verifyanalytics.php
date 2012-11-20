@@ -15,7 +15,7 @@ defined('_JEXEC') or die('Restricted access');
 // import library dependencies
 jimport('joomla.plugin.plugin');
 
-class plgContentVerifyanalitics extends JPlugin {
+class plgContentVerifyanalytics extends JPlugin {
 
     public function __construct(&$subject, $config = array()) {
         parent::__construct($subject, $config);
@@ -33,13 +33,10 @@ class plgContentVerifyanalitics extends JPlugin {
      */        
     public function onContentPrepare($context, &$article, &$params, $limitstart=0){
         $meta = '<meta name="google-site-verification" content="'.$this->params->def('meta_code').'" />';
-        $document =& JDocument::getInstance();
-        if($document->getType() != 'html'){
+        $document =& JFactory::getDocument();
+        if($document->getType() !== 'html'){
             return;
         }
         $document->addCustomTag($meta);
     }
-    
- 
-
 } //End Class
